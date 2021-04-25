@@ -28,11 +28,11 @@
   <code>rails s</code>
 </pre>
 
-<h4>6. Everything is ready. Visit the localserver! :)</h4>
+<p>Everything is ready. Visit the localserver! :)</p>
 
 <h3>Database schema</h3>
 
-<p>The database is composed of five tables:</p>
+<p>The database is composed of five tables. Each of them has a relation <strong>one to many</strong>, except the relation for users with quizzes (<strong>many to many</strong>). A user can do many tests, and a test can be done by many users. For this reason we have created the attemps table.</p>
 <ul>
   <li>Answers</li>
   <li>Questions</li>
