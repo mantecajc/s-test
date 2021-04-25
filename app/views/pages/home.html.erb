@@ -1,4 +1,4 @@
-<!-- We iterate through the quizzes & we display them + difficulty -->
+<!-- We iterate through the quizzes | display quizzes + difficulty -->
 <div class="home-container">
   <div class="cards">
     <!-- [X] A user can see a collection of quizzes -->
@@ -6,8 +6,9 @@
       <%= link_to quiz_path(quiz) do %>
         <div class="quiz-card" data-quiz-id="<%= quiz.id %>">
           <h4><%= quiz.title.html_safe %></h4>
-          <% unless quiz.attemps.last.nil? %>
-            <div class="home-quiz-score"><%= (quiz.attemps.last.score * 100).to_i %>%</div>
+          <!-- We show the result of the last test of the current user -->
+          <% unless (@user.nil? || quiz.attemps.where(user_id: @user.id).last.nil?) %>
+            <div class="home-quiz-score"><%= (quiz.attemps.where(user_id: @user.id).last.score * 100).to_i %>%</div>
           <% end %>
           <p><%= quiz.difficulty.html_safe %></p>
         </div>
