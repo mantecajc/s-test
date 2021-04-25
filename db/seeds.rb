@@ -19,6 +19,7 @@ puts '1. Cleaning database...'
 Answer.destroy_all
 Question.destroy_all
 Quiz.destroy_all
+User.destroy_all
 
 puts '2. Creating quizzes, questions, answers...'
 
