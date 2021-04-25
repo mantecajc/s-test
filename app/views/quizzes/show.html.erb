@@ -7,15 +7,15 @@
   </div>
 
   <div class="score-box">
-    <% if @attemps.last.nil? %>
+    <% if @attemps.where(user_id: @user.id).last.nil? %>
         <h4 class="quiz-welcome-msg">Welcome to this new WeQuiz test, good luck!</h4>
       <!-- [X] A quizz is considered passed if +60% of questions are answered correctly -->
       <!-- [X] A user can see the scores of his quizzes -->
-      <% elsif @attemps.last.score >= 0.6 %>
+      <% elsif @attemps.where(user_id: @user.id).last.score >= 0.6 %>
         <h4 class="score">Score: <%= (@attemps.last.score * 100).to_i %>%</h4>
         <h4>Well done! You have passed this test!</h4>
       <% else %>
-        <h4 class="score">Score: <%= (@attemps.last.score * 100).to_i %>%</h4>
+        <h4 class="score">Score: <%= (@attemps.where(user_id: @user.id).last.score * 100).to_i %>%</h4>
         <h4>Ouch, you have not passed this test! You need some training...</h4>
         <h4>Try again!</h4>
       <% end %>
