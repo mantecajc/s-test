@@ -1,7 +1,46 @@
+<h1>Welcome to WeQuizz!</h1>
+<p>You can test your knowledge of general culture <a href="https://we-quizz.herokuapp.com/" target="_blank">here</a>. Remember that you need to register to get started!</p>
+
 ## Setup
 
-<h1>Welcome to WeQuizz!</h1>
-<p>You can test your knowledge of general culture <a href="https://we-quizz.herokuapp.com/">here</a>. Remember that you need to register to get started.</p>
+<h3>Getting started</h4>
+
+<h4>1. Clone the repository:</h4>
+<pre>
+  <code>cd ~/code/YOUR_OWNER_GITHUB_USERNAME</code>
+  <code>git clone git@github.com:mantecajc/s-test.git</code>
+  <code>cd s-test</code>
+</pre>
+
+<h4>2. Install dependencies</h4>
+<pre>
+  <code>bundle install</code>
+  <code>yarn install</code>
+</pre>
+
+<h4>4. Set up database</h4>
+<pre>
+  <code>rails db:create db:migrate db:seed</code>
+</pre>
+
+<h4>5. Launch the server</h4>
+<pre>
+  <code>rails s</code>
+</pre>
+
+<h4>6. Everything is ready. Visit the localserver! :)</h4>
+
+<h3>Database schema</h3>
+
+<p>The database is composed of five tables:</p>
+<ul>
+  <li>Answers</li>
+  <li>Questions</li>
+  <li>Quizzes</li>
+  <li>Attemps</li>
+  <li>Users</li>
+</ul>
+<img src="app/assets/images/database-schema.png" alt="Database schema">
 
 
 
