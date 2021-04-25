@@ -3,5 +3,6 @@ class PagesController < ApplicationController
 
   def home
     @quizzes = Quiz.all
+    @user = current_user
   end
 end

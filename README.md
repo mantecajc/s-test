@@ -5,7 +5,7 @@
 
 <h3>Getting started</h4>
 
-<h4>1. Clone the repository:</h4>
+<h4>1. Clone the repository</h4>
 <pre>
   <code>cd ~/code/YOUR_OWNER_GITHUB_USERNAME</code>
   <code>git clone git@github.com:mantecajc/s-test.git</code>
