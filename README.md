@@ -18,12 +18,12 @@
   <code>yarn install</code>
 </pre>
 
-<h4>4. Set up database</h4>
+<h4>3. Set up database</h4>
 <pre>
   <code>rails db:create db:migrate db:seed</code>
 </pre>
 
-<h4>5. Launch the server</h4>
+<h4>4. Launch the server</h4>
 <pre>
   <code>rails s</code>
 </pre>
